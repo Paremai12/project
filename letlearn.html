@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Desserts</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.2/dist/aframe-extras.min.js"></script>
+    <script
+        src="https://unpkg.com/aframe-environment-component@1.3.3/dist/aframe-environment-component.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <a-scene>
+        <a-entity environment="preset: forest"></a-entity>
+
+        <!-- กำหนด cursor -->
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+
+        <!-- น้ำพุ -->
+        <a-entity gltf-model="Fountain.glb" position="0 1.329 0" scale="2 2 2">
+        </a-entity>
+
+        <!-- พื้น -->
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 0" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 4.018" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 8.003" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 12.024" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 -4.016" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 -7.941" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="0 -0.173 -11.939" scale="2 2 2">
+        </a-entity>
+
+
+        <a-entity gltf-model="Floor.glb" position="-4.025 -0.173 0" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="-8.025 -0.119 0" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="-12.065 -0.093 0" scale="2 2 2">
+        </a-entity>
+
+
+        <a-entity gltf-model="Floor.glb" position="4.001 -0.173 0" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="8.016 -0.173 0" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Floor.glb" position="12.053 -0.173 0" scale="2 2 2">
+        </a-entity>
+
+        <!-- บ้าน -->
+        <a-entity gltf-model="House.glb" position="-5.479 -0.004 12.250" rotation="0 90 0" scale="7 7 7">
+        </a-entity>
+
+        <a-entity gltf-model="House2.glb" position="-12.432 -0.004 9.819" rotation="0 359.990 0" scale="7 7 7">
+        </a-entity>
+
+        <a-entity gltf-model="Fantasy_Stable.glb" position="12.296 0.057 -10.992" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Bakery.glb" position="-12.398 2.873 -13.779" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Bakery.glb" position="-5.565 2.873 -13.779" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Farm.glb" position="7.750 0.068 9.537" rotation="0 180 0" scale="5 5 5">
+        </a-entity>
+
+
+
+        <!-- ไฟ -->
+
+        <a-entity gltf-model="Post_Lantern.glb" position="-2.286 -0.276 13.697" rotation="0 90.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="2.300 -0.276 13.697" rotation="0 -90.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="-2.286 -0.276 -13.650" rotation="0 90.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="2.300 -0.276 -13.672" rotation="0 -90.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="-13.785 -0.276 2.282" rotation="0 180.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="-13.819 -0.276 -2.344" rotation="0 0 0" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="13.843 -0.276 2.282" rotation="0 180.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Post_Lantern.glb" position="13.831 -0.276 -2.324" rotation="0 0 0" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <!-- ตกแต่ง -->
+
+        <a-entity gltf-model="Camping_Stuff.glb" position="-6.228 0.880 10.019" rotation="0 -90 0" scale="2 2 2">
+        </a-entity>
+
+        <a-entity gltf-model="Market_Stalls.glb" position="-5.939 0.013 5.938" scale="4 4 4">
+        </a-entity>
+
+        <a-entity gltf-model="Cow.glb" position="6.566 0.015 -9.105" scale="0.1 0.1 0.1">
+        </a-entity>
+
+        <a-entity gltf-model="Cow.glb" position="7.744 0.015 -9.105" scale="0.1 0.1 0.1">
+        </a-entity>
+
+        <a-entity gltf-model="Cow.glb" position="8.959 0.015 -9.105" scale="0.1 0.1 0.1">
+        </a-entity>
+
+        <a-entity gltf-model="Cow.glb" position="10.097 0.015 -9.105" scale="0.1 0.1 0.1">
+        </a-entity>
+
+        <a-entity gltf-model="Haystack.glb" position="4.703 0.015 -9.105" scale="0.1 0.1 0.1">
+        </a-entity>
+
+        <a-entity gltf-model="Market_Stalls_Compact.glb" position="-11.052 0.151 -6.018" scale="3 3 3">
+        </a-entity>
+
+        <a-entity gltf-model="Market_Stalls_Compact.glb" position="-4.903 0.151 -6.018" scale="3 3 3">
+        </a-entity>
+
+        <a-entity gltf-model="Crops.glb" position="5.278 0.071 -4.907" rotation="0 90 0" scale="3 3 3">
+        </a-entity>
+
+        <a-entity gltf-model="Crops.glb" position="10.367 0.071 -4.907" rotation="0 90 0" scale="3 3 3">
+        </a-entity>
+
+        <a-entity gltf-model="Tree.glb" position="-3.160 -0.129 15.468" rotation="0 90 0" scale="1 1 1">
+        </a-entity>
+
+        <!-- คน -->
+
+        <a-entity gltf-model="Food_Worker.glb" position="-2.722 0.072 7.797" rotation="0 180 0" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Generic_Female.glb" position="-5.064 0.072 6.411" rotation="0 65.000 0"
+            scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Chicken_Guy.glb" position="5.602 0.072 -4.510" rotation="0 90 0" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Retail_Worker.glb" position="7.021 0.072 3.124" rotation="0 90 0" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <a-entity gltf-model="Citizen3.glb" position="8.150 0.072 3.124" rotation="0 -90 0" scale="0.5 0.5 0.5">
+        </a-entity>
+
+        <!-- ปุ่ม -->
+
+        <!-- กล่องแรก -->
+        <a-entity gltf-model="Tubbs_the_cat.glb" position="-6.646 0.919 -2.097" rotation="0 180 0" scale="1 1 1"
+            class="clickable" event-set__mouseenter="animation__hover: pause"
+            event-set__mouseleave="animation__hover: resume" event-set__click="scale: 1.2 1.2 1.2; cursor: true;"
+            onclick="window.location.href='https://kanomth.com/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%a0%e0%b8%97%e0%b8%81%e0%b8%a7%e0%b8%99/';"
+            animation="property: position; to: -6.646 1.2 -2.097; dur: 1000; dir: alternate; loop: true">
+            <a-text value="Stirred desserts" color="white" position="1.479 0.655 0.252" scale="2 2 2" visible="false"
+                class="text-box" rotation="0 180 0"></a-text>
+        </a-entity>
+
+        <!-- กล่องที่สอง -->
+        <a-entity gltf-model="Tubbs_the_cat.glb" position="-8.509 0.919 7.187" rotation="0 -90 0" scale="1 1 1"
+            class="clickable" event-set__mouseenter="animation__hover: pause"
+            event-set__mouseleave="animation__hover: resume" event-set__click="scale: 1.2 1.2 1.2; cursor: true;"
+            onclick="window.location.href='https://kanomth.com/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%a0%e0%b8%97%e0%b8%99%e0%b8%b6%e0%b9%88%e0%b8%87/';"
+            animation="property: position; to: -8.509 1.2 7.187; dur: 1000; dir: alternate; loop: true">
+            <a-text value="Steamed desserts" color="white" position="1.616 0.655 0.252" scale="2 2 2" visible="false"
+                class="text-box" rotation="0 180 0"></a-text>
+        </a-entity>
+
+        <!-- กล่องที่สาม -->
+        <a-entity gltf-model="Tubbs_the_cat.glb" position="8.736 1.329 -7.786" rotation="0 90 0" scale="1 1 1"
+            class="clickable" event-set__mouseenter="animation__hover: pause"
+            event-set__mouseleave="animation__hover: resume" event-set__click="scale: 1.2 1.2 1.2; cursor: true;"
+            onclick="window.location.href='https://kanomth.com/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%a0%e0%b8%97%e0%b8%97%e0%b8%ad%e0%b8%94/';"
+            animation="property: position; to: 8.736 1.6 -7.786; dur: 1000; dir: alternate; loop: true">
+            <a-text value="Fried desserts" color="white" position="1.311 0.655 0.242" scale="2 2 2" visible="false"
+                class="text-box" rotation="0 180 0"></a-text>
+        </a-entity>
+
+        <!-- กล่องที่สี่ -->
+        <a-entity gltf-model="Tubbs_the_cat.glb" position="4.339 0.919 -11.250" rotation="0 90 0" scale="1 1 1"
+            class="clickable" event-set__mouseenter="animation__hover: pause"
+            event-set__mouseleave="animation__hover: resume" event-set__click="scale: 1.2 1.2 1.2; cursor: true;"
+            onclick="window.location.href='https://kanomth.com/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%a0%e0%b8%97%e0%b9%80%e0%b8%8a%e0%b8%b7%e0%b9%88%e0%b8%ad%e0%b8%a1/';"
+            animation="property: position; to: 4.339 1.2 -11.250; dur: 1000; dir: alternate; loop: true">
+            <a-text value="Syrup-Coated desserts" color="white" position="2.109 0.655 0.252" scale="2 2 2"
+                visible="false" class="text-box" rotation="0 180 0"></a-text>
+        </a-entity>
+
+        <!-- กล่องที่ห้า -->
+        <a-entity gltf-model="Tubbs_the_cat.glb" position="2.324 0.919 7.187" rotation="0 90 0" scale="1 1 1"
+            class="clickable" event-set__mouseenter="animation__hover: pause"
+            event-set__mouseleave="animation__hover: resume" event-set__click="scale: 1.2 1.2 1.2; cursor: true;"
+            onclick="window.location.href='https://kanomth.com/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%a0%e0%b8%97%e0%b8%ad%e0%b8%9a/';"
+            animation="property: position; to: 2.324 1.2 7.187; dur: 1000; dir: alternate; loop: true">
+            <a-text value="Baked desserts" color="white" position="1.554 0.655 0.252" scale="2 2 2" visible="false"
+                class="text-box" rotation="0 180 0"></a-text>
+        </a-entity>
+
+        <!-- กล่องที่หก -->
+        <a-entity gltf-model="Tubbs_the_cat.glb" position="9.841 1.329 6.447" rotation="0 0 0" scale="1 1 1"
+            class="clickable" event-set__mouseenter="animation__hover: pause"
+            event-set__mouseleave="animation__hover: resume" event-set__click="scale: 1.2 1.2 1.2; cursor: true;"
+            onclick="window.location.href='https://kanomth.com/%e0%b8%9b%e0%b8%a3%e0%b8%b0%e0%b9%80%e0%b8%a0%e0%b8%97%e0%b8%95%e0%b9%89%e0%b8%a1/';"
+            animation="property: position; to: 9.841 1.6 6.447; dur: 1000; dir: alternate; loop: true">
+            <a-text value="Boiled desserts" color="white" position="1.311 0.655 0.242" scale="2 2 2" visible="false"
+                class="text-box" rotation="0 180 0"></a-text>
+        </a-entity>
+
+        <!-- เพิ่มเสียง -->
+        <a-sound src="./song/Stardew_Valley.mp3" autoplay="true" position="0 1 0"></a-sound>
+
+        <script>
+            // Function to show the text when the cursor is hovering over the box
+            document.querySelectorAll('.clickable').forEach(function (entity) {
+                entity.addEventListener('mouseenter', function () {
+                    var textElement = entity.querySelector('.text-box');
+                    if (textElement) {
+                        textElement.setAttribute('visible', 'true');
+                    }
+                });
+
+                entity.addEventListener('mouseleave', function () {
+                    var textElement = entity.querySelector('.text-box');
+                    if (textElement) {
+                        textElement.setAttribute('visible', 'false');
+                    }
+                });
+            });
+
+            // Function to navigate to a new page when the box is clicked
+            function goToPage(page) {
+                window.location.href = page;
+            }
+        </script>
+
+    </a-scene>
+
+</body>
+
+</html>

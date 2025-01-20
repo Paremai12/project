@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แบบทดสอบขนมไทย</title>
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      padding: 20px;
+      background-color: #f9f7f1;
+      margin: 0;
+      text-align: center;
+    }
+    .quiz-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 70%;
+      max-width: 600px;
+      margin: auto;
+      border: 2px solid #f2a7b6;
+    }
+    h2 {
+      color: #f39c12;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .question {
+      margin-bottom: 25px;
+      font-size: 18px;
+      color: #333;
+      font-weight: 500;
+    }
+    .options {
+      margin: 15px 0;
+      text-align: left;
+      font-size: 16px;
+    }
+    .options label {
+      display: block;
+      padding: 8px;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: background-color 0.3s ease;
+    }
+    .options label:hover {
+      background-color: #f39c12;
+      color: white;
+    }
+    .btn-submit {
+      padding: 12px 25px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-submit:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+    .result.success {
+      color: #27ae60;
+    }
+    .result.fail {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h2>แบบทดสอบขนมไทย</h2>
+  <div id="quiz"></div>
+  <button class="btn-submit" onclick="submitQuiz()">ส่งคำตอบ</button>
+  <div class="result" id="result"></div>
+</div>
+
+<script src="quizData.js"></script>
+<script>
+  // ฟังก์ชันเพื่อโหลดคำถามจากไฟล์ quizData.js
+  function loadQuiz() {
+    const quizContainer = document.getElementById('quiz');
+    questions.forEach((question, index) => {
+      const questionElement = document.createElement('div');
+      questionElement.classList.add('question');
+      
+      // แสดงคำถาม
+      questionElement.innerHTML = `<p>${question.question}</p>`;
+      
+      // แสดงตัวเลือก
+      const optionsContainer = document.createElement('div');
+      optionsContainer.classList.add('options');
+      question.options.forEach(option => {
+        optionsContainer.innerHTML += `
+          <label>
+            <input type="radio" name="question${index}" value="${option.charAt(0)}">
+            ${option}
+          </label>
+        `;
+      });
+      
+      questionElement.appendChild(optionsContainer);
+      quizContainer.appendChild(questionElement);
+    });
+  }
+
+  // ฟังก์ชันเพื่อส่งคำตอบและคำนวณคะแนน
+  function submitQuiz() {
+    let score = 0;
+    
+    questions.forEach((question, index) => {
+      const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+      if (selectedOption && selectedOption.value === question.answer) {
+        score++;
+      }
+    });
+    
+    // แสดงผลคะแนน
+    const resultElement = document.getElementById('result');
+    if (score === questions.length) {
+      resultElement.textContent = `ยอดเยี่ยม! คุณได้คะแนน ${score} จาก ${questions.length} คะแนน`;
+      resultElement.classList.add('success');
+      resultElement.classList.remove('fail');
+    } else {
+      resultElement.textContent = `คุณได้คะแนน ${score} จาก ${questions.length} คะแนน`;
+      resultElement.classList.add('fail');
+      resultElement.classList.remove('success');
+    }
+  }
+
+  // เรียกฟังก์ชันเพื่อโหลดคำถาม
+  loadQuiz();
+</script>
+
+</body>
+</html>
